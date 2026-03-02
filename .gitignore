@@ -1,5 +1,15 @@
 # Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
+#ignore executables
+*.exe
+*.out
+
+#ingore hiddne "dot" files
+.*
+
+#whitelist specific dot files
+!.gitignore
+
 # dependencies
 node_modules/
 
