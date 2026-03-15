@@ -1,57 +1,126 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { View, Text, StyleSheet, Pressable, Image } from 'react-native';
 import { Link } from 'expo-router';
-import pic from '../assets/Super Mario Generations.webp';
+import PageTemplate from "../components/PageTemplate";
 
-//<Image source={pic} style={{ width: 200, height: '100%', marginBottom: 20 }} />
+const PROFILE_SRC = require("../assets/profile3.jpg");
 
-export default function Home() {
+export default function HomePage() {
+
   return (
-    <View style={styles.container}>
-      
-      <Text style={styles.title}>-Welcome to the AI-controlled App!</Text>
-      <Text style={{ marginTop: 10, marginBottom: 20}}>
-      -This app is controlled by an AI, and it writes some of the lines you see here!</Text>
-      <Text style={styles.card}>MUHAHAHAHAHAHAHAHA!</Text>
-      <Text></Text>
-      <StatusBar style="auto" />
+    <View style={styles.topSpace}>
+    <PageTemplate
+      eyebrow="Homepage"
+      title=""
+      subtitle=""
 
-    <Link href="/about" style={styles.link}>Go to About Page</Link>
-    <Link href="/blog" style={styles.link}>Go to Blog Page</Link>
-    <Link href="/contact" style={styles.link}>Go to Contact Page</Link>
-    <Link href="/portfolio" style={styles.link}>Go to Portfolio Page</Link>
-    <Link href="/resume" style={styles.link}>Go to Resume Page</Link>
-    
+    >
+      <View style={styles.heroRow}>
+        <View style={styles.avatarWrap}>
+          <Image
+            source={PROFILE_SRC}
+            style={styles.avatar}
+            accessibilityLabel="Profile Picture"
+          />
+        </View>
+
+        <View style={styles.leadText}>
+          <Text style={styles.name}>Joseph Bentley</Text>
+          <Text style={styles.title}>Programmer, Software Engineer</Text>
+
+          <Text style={styles.description}>
+            PLACEHOLDER!!!
+          </Text>
+
+          <View style={styles.ctaRow}>
+            <Link href="/portfolio" asChild>
+              <Pressable style={styles.primaryBtn}>
+                <Text style={styles.primaryBtnText}>See My Work</Text>
+              </Pressable>
+            </Link>
+
+            <Link href="/contact" asChild>
+              <Pressable style={styles.secondaryBtn}>
+                <Text style={styles.secondaryBtnText}>Get In Touch</Text>
+              </Pressable>
+            </Link>
+          </View>
+        </View>
+      </View>
+    </PageTemplate>
     </View>
     
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  topSpace: {
+    paddingVertical: 40,
+  },
+  heroRow: {
+    flexDirection: "row",
+    gap: 18,
+    alignItems: "center",
+  },
+  avatarWrap: {
+    width: 200,
+    minWidth: 120,
+    alignItems: "center",
+  },
+  avatar: {
+    width: 194,
+    height: 292,
+    borderRadius: 16,
+    borderWidth: 1,
+    borderColor: "#26324a",
+    backgroundColor: "#0f1724",
+  },
+  leadText: {
     flex: 1,
-    backgroundColor: '#ffffff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    //flexWrap: 'wrap',
+    gap: 10,
+  },
+  name: {
+    color: "#f3f7ff",
+    fontSize: 26,
+    fontWeight: "800",
   },
   title: {
-    fontWeight: 'bold',
-    fontSize: 18,
-    marginBottom: 20,
+    color: "#a8b3c7",
+    fontSize: 16,
+    marginTop: 4,
+    marginBottom: 8,
   },
-  card: {
-    backgroundColor: '#eeeeee',
-    padding: 2,
-    borderRadius: 5,
-    marginBottom: 10,
-    boxShadow: '4px 4px rgba(0, 0, 0, 0.1)',
+  description: {
+    color: "#c7d2e6",
+    fontSize: 15,
+    lineHeight: 22,
+    maxWidth: 760,
   },
-  link: {
-    marginTop: 8,
-    fontSize: 14,
-    marginVertical: 4,
-    borderBottomWidth: 1,
-    borderBottomColor: 'blue',
-  }
+  ctaRow: {
+    flexDirection: "row",
+    gap: 12,
+    marginTop: 12,
+  },
+  primaryBtn: {
+    backgroundColor: "#6ea8fe",
+    paddingVertical: 10,
+    paddingHorizontal: 16,
+    borderRadius: 12,
+  },
+  primaryBtnText: {
+    color: "#081120",
+    fontWeight: "700",
+  },
+  secondaryBtn: {
+    borderWidth: 1,
+    borderColor: "#26324a",
+    backgroundColor: "#182235",
+    paddingVertical: 10,
+    paddingHorizontal: 16,
+    borderRadius: 12,
+  },
+  secondaryBtnText: {
+    color: "#f3f7ff",
+    fontWeight: "600",
+  },
 });

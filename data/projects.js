@@ -1,0 +1,47 @@
+export const projects = [
+    {
+        slug: "space-invaders",
+        title: "Space Invaders",
+        description: "",
+        techStack: ["JavaScript", "Processing"],
+        githubLink: "",
+        fullDescription: "",
+        images: "",
+    },
+    {
+        slug: "game-of-life",
+        title: "Conway's Game of Life",
+        description: "",
+        techStack:["Python", "PyGame"],
+        githubLink: "",
+        fullDescription: "",
+        images: "",
+    },
+    {
+        slug: "esp32-alert-system",
+        title: "Alert System",
+        description: "",
+        techStack: ["ESP32", "Embedded Systems", "Actuators", "Sensors", "Arduino IDE"],
+        githubLink: "",
+        fullDescription: "",
+        images: "",
+    },
+    {
+        slug: "esp32-buzzers",
+        title: "Music with Piezo Buzzers",
+        description: "",
+        techStack: ["EPS32", "Embedded Systems", "Piezo Buzzers", "Arduino IDE"],
+        githubLink: "",
+        fullDescription: "",
+        images: "",
+    },
+    {
+        slug: "pokemon-app",
+        title: "Pokemon Search",
+        description: "",
+        techStack: ["React Native", "PokeApi"],
+        githubLink: "",
+        fullDescription: "",
+        images: "",
+    }
+]

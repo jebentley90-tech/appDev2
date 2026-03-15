@@ -1,45 +1,29 @@
-import { StyleSheet, Text, View } from 'react-native'
-import { Link } from 'expo-router';
+import { Text } from 'react-native'
 import React from 'react'
+import PageTemplate, { Section, Card } from "../components/PageTemplate";
 
-const about = () => {
+export default function AboutPage() {
   return (
-    <View style={styles.container}>
-      <Text>This is the About Page.</Text>
+    <PageTemplate
+      eyebrow="About This Site"
+      title="Developer: Joseph Bentley"
+      subtitle=""
+      primaryAction={{ label: "Portfolio", href: "/portfolio" }}
+      secondaryAction={{ label: "Blog", href: "/blog" }}
+    >
+      <Section
+        title="Description"
+        description="Placeholder"
+      >
+        <Card
+          title="Focus"
+          text="Placeholder"
+        />
+      </Section>
 
-      <Link href="/" style={styles.link}>Go to Home Page</Link>
-      
-    </View>
-  )
+      <Section title="Skills">
+        <Card title="Placeholder"/>
+      </Section>
+    </PageTemplate>
+  );
 }
-
-export default about
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#ffffff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    //flexWrap: 'wrap',
-  },
-  title: {
-    fontWeight: 'bold',
-    fontSize: 18,
-    marginBottom: 20,
-  },
-  card: {
-    backgroundColor: '#eeeeee',
-    padding: 2,
-    borderRadius: 5,
-    marginBottom: 10,
-    boxShadow: '4px 4px rgba(0, 0, 0, 0.1)',
-  },
-  link: {
-    marginTop: 30,
-    fontSize: 16,
-    marginVertical: 10,
-    borderBottomWidth: 1,
-    borderBottomColor: 'blue',
-  }
-});
