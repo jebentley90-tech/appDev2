@@ -8,4 +8,4 @@ my project, showing the updated React Portfolio.
 
 Known Limitations:
 Layout may not be fine-tuned to my expecations yet. Certain
-inputs do not yield the optimal outcome yet. Blog is bland.
+inputs do not yield my desired outcome yet. Blog is bland.
