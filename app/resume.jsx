@@ -80,22 +80,23 @@ export default function ResumePage() {
           <View style={styles.itemBlock}>
             <Text style={styles.itemTitle}>Personal Projects</Text>
             <Text style={styles.itemSubtitle}>
-              Personal Project and Year
+              Processing
             </Text>
-
-            <Text style={styles.text}>
               
+            <Text style={styles.text}>
+              I have pursued several different additional projects using JavaScript and Processing.
             </Text>
           </View>
 
           <View style={styles.itemBlock}>
-            <Text style={styles.itemTitle}>Experience</Text>
+            <Text style={styles.itemTitle}>Additional Experience</Text>
             <Text style={styles.itemSubtitle}>
               
             </Text>
               
             <Text style={styles.text}>
-              
+              I have used Unity to explore game development. I have also used tutorials to create a
+              first-person simulation using the command line.
             </Text>
           </View>
         </Card>
